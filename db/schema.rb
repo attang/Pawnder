@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20141118224418) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
-    t.integer  "type"                   default: 0 #0 or nil is dog lover, 1 is dog lover
+    t.integer  "type"                   default: 0 #0 or nil is dog lover, 1 is dog owner
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
