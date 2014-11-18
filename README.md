@@ -15,17 +15,21 @@ has_many Messages
 has_many Dogs
 belongs to City
 validation (can’t have two profiles for the same owner name)
+
 Dog 
 Profile: name, age, breed, description
 belongs_ to User
+
 Cities
 has_many User
 view page listing all Users in a particular city
+
 Review
 for everyone to see
 belongs_to User
 text that shows review from User
 rating out of 5
+
 Messages
 A tab that shows up on the root page
 only for person logged in
