@@ -1,3 +1,8 @@
 <h3>User</h3>
 <p>Name: <%= @user.name if @user.name %></p>
 <p>Email: <%= @user.email if @user.email %></p>
+<% if @user.type == 1%>
+	<p> I am a Dog Owner!!!! Here is a list of my dogs [iterate through list of dogs and add a link for each dog]</p>
+<% else %>
+	<p> I am a Dog Lover!!!! I don't own dogs. Add one by clicking here [insert button here to add method for dogs and assign to this owner] </p>
+<% end %>
