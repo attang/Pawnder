@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141118224418) do
+ActiveRecord::Schema.define(version: 20141119212921) do
+
+  create_table "dogs", force: true do |t|
+    t.string   "name"
+    t.integer  "age"
+    t.string   "breed"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -27,7 +36,7 @@ ActiveRecord::Schema.define(version: 20141118224418) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
-    t.integer  "type"                   default: 0 #0 or nil is dog lover, 1 is dog owner
+    t.integer  "type"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
