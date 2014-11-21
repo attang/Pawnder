@@ -1,0 +1,8 @@
+<h1>Messages#new</h1>
+
+<h2> New Message! :D </h2>
+
+<%= simple_form_for Message.new do |f| %>
+  <%= f.input :message %>
+  <%= f.button :submit %>
+<% end %>

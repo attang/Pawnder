@@ -1,4 +1,4 @@
-<h3>User</h3>
+<h2>User</h2>
 <p>Name: <%= @user.name if @user.name %></p>
 <p>Email: <%= @user.email if @user.email %></p>
 <% if @user.type == 1%>
@@ -6,3 +6,7 @@
 <% else %>
 	<p> I am a Dog Lover!!!! I don't own dogs. Add one by clicking here [insert button here to add method for dogs and assign to this owner] </p>
 <% end %>
+
+<h3><%= link_to '+send a message+', new_message_path %></h3>
+
+<h3>Rating/Review</h3>

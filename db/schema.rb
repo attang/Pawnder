@@ -11,13 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141119212921) do
+ActiveRecord::Schema.define(version: 20141120233545) do
 
   create_table "dogs", force: true do |t|
     t.string   "name"
     t.integer  "age"
     t.string   "breed"
     t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "messages", force: true do |t|
+    t.integer  "to"
+    t.integer  "from"
+    t.string   "date"
+    t.string   "type"
+    t.string   "message"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
