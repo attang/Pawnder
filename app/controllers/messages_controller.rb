@@ -3,6 +3,10 @@ class MessagesController < ApplicationController
   end
 
   def create
+    @message = Message.new(message_params)
+    @message.from = current_user.id
+    @message.save
+    redirect_to user_path(current_user)
   end
 
   def show
@@ -15,5 +19,11 @@ class MessagesController < ApplicationController
   end
 
   def destroy
+  end
+
+  private 
+
+  def message_params
+    params.require(:message).permit(:message)
   end
 end
