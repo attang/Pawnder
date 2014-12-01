@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <h3>Message</h3>
+    <div class="column">
+      <table class="table">
+        <tbody>
+          <% @messages.each do |message| %>
+            <tr>
+              <%= message.from %>
+               <%= message.message %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

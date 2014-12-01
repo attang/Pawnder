@@ -7,6 +7,12 @@
 	<p> I am a Dog Lover!!!! I don't own dogs. Add one by clicking here [insert button here to add method for dogs and assign to this owner] </p>
 <% end %>
 
-<h3><%= link_to '+send a message+', new_message_path %></h3>
+<h2> New Message! :D </h2>
+
+<%= simple_form_for Message.new do |f| %>
+  <%= f.hidden_field :to, :value => params[:id] %>
+  <%= f.input :message %>
+  <%= f.button :submit %>
+<% end %>
 
 <h3>Rating/Review</h3>
