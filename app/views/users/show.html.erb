@@ -1,13 +1,14 @@
-<h2>User</h2>
-<p>Name: <%= @user.name if @user.name %></p>
+<h2><%= @user.name if @user.name %></h2>
 <p>Email: <%= @user.email if @user.email %></p>
-<% if @user.type == 1%>
+<h4>Type:</h4>
+<% if @user.which == 1%>
 	<p> I am a Dog Owner!!!! Here is a list of my dogs [iterate through list of dogs and add a link for each dog]</p>
 <% else %>
 	<p> I am a Dog Lover!!!! I don't own dogs. Add one by clicking here [insert button here to add method for dogs and assign to this owner] </p>
 <% end %>
 
-<h2> New Message! :D </h2>
+
+<h2> Send me a message to meet up! </h2>
 
 <%= simple_form_for Message.new do |f| %>
   <%= f.hidden_field :to, :value => params[:id] %>
