@@ -10,15 +10,6 @@
 	<p> I am a Dog Lover!!!! I don't own dogs. I want to play with yours!</p>
 <% end %>
 
-
-<% if @user != current_user%>
-	<%= simple_form_for Message.new  do |f| %>
-	  <%= f.hidden_field :to, :value => params[:id] %>
-	  <%= f.hidden_field :date, :value => DateTime.now.to_date %>
-	  <%= f.input :message %>
-	  <%= f.button :submit %>
-	<% end %>
-<%end %>
 <% if @user == current_user %>
   <%= button_to "Add Dog", new_dog_path, :class => "button medium", :method => :get %>
 <% end %>
