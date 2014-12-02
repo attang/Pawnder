@@ -10,10 +10,6 @@
 	<p> I am a Dog Lover!!!! I don't own dogs. I want to play with yours!</p>
 <% end %>
 
-<<<<<<< HEAD
-<%= params[:id] %>
-<%= current_user.id %>
-
 
 <% if @user != current_user%>
 	<%= simple_form_for Message.new  do |f| %>
@@ -22,10 +18,9 @@
 	  <%= f.input :message %>
 	  <%= f.button :submit %>
 	<% end %>
-=======
+<%end %>
 <% if @user == current_user %>
   <%= button_to "Add Dog", new_dog_path, :class => "button medium", :method => :get %>
->>>>>>> FETCH_HEAD
 <% end %>
 
 <% if @user != current_user %>
