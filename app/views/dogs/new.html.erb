@@ -1,0 +1,6 @@
+<%= simple_form_for Dog.new, url: { action: 'create' } do |f| %>
+  Name: <%= f.input :name %>
+  Age: <%= f.input :age %>
+  Breed: <%= f.input :breed %>
+  <%= f.submit "Create" %>
+  <% end %>
