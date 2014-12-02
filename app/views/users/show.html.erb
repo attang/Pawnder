@@ -1,10 +1,17 @@
 <h2>User</h2>
 <p>Name: <%= @user.name if @user.name %></p>
 <p>Email: <%= @user.email if @user.email %></p>
-<% if @user.type == 1%>
-	<p> I am a Dog Owner!!!! Here is a list of my dogs [iterate through list of dogs and add a link for each dog]</p>
+<% if @user.which == 0%>
+	<p> I am a Dog Owner!!!! Here is a list of my dogs:</p>
+	<% @user.dogs.each do |dog| %>
+	  <% render dog %>
+	<% end %>
 <% else %>
-	<p> I am a Dog Lover!!!! I don't own dogs. Add one by clicking here [insert button here to add method for dogs and assign to this owner] </p>
+	<p> I am a Dog Lover!!!! I don't own dogs. I want to play with yours!</p>
+<% end %>
+
+<% if @user == current_user %>
+  <%= button_to "Add Dog", new_dog_path, :class => "button medium", :method => :get %>
 <% end %>
 
 <h3><%= link_to '+send a message+', new_message_path %></h3>
