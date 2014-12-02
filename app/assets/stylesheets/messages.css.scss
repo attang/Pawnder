@@ -1,3 +1,47 @@
 // Place all the styles related to the Messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.message-box {
+	width: 800px;
+	overflow: auto;
+	position: relative;
+	background-color: #fff;
+	border: 1px solid #D7D7D7;
+	border-radius: 5px;
+	color: #000;
+	margin: 0 auto;
+	margin-bottom:20px;
+}
+
+#from {
+	width: 97%;
+	margin:auto;
+	text-align: left;
+	position: relative;
+	padding: 5px;
+	color: #3a3a3a;
+	font-size: 20px;
+	border-bottom: 1px solid rgba(215, 215, 215, 0.24);
+
+}
+
+#date {
+	float: right;
+	color: red;
+}
+
+#message {
+	padding: 10px 5px;
+	width:97%;
+	margin: auto;
+	height: 100px;
+	position: relative;
+
+}
+
+.btn {
+	float: right;
+	margin: 10px;
+}

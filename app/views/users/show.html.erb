@@ -1,6 +1,7 @@
 <h2><%= @user.name if @user.name %></h2>
 <p>Email: <%= @user.email if @user.email %></p>
 <h4>Type:</h4>
+
 <% if @user.which == 1%>
 	<p> I am a Dog Owner!!!! Here is a list of my dogs [iterate through list of dogs and add a link for each dog]</p>
 <% else %>
@@ -12,6 +13,7 @@
 
 <%= simple_form_for Message.new do |f| %>
   <%= f.hidden_field :to, :value => params[:id] %>
+  <%= f.hidden_field :date, :value => DateTime.now.to_date %>
   <%= f.input :message %>
   <%= f.button :submit %>
 <% end %>

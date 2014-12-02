@@ -10,6 +10,7 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     @message.to = message_params[:to]
+    @message.date = message_params[:date]
     @message.from = current_user.id
     @message.save
     redirect_to user_path(message_params[:to])
@@ -22,6 +23,6 @@ class MessagesController < ApplicationController
   private 
 
   def message_params
-    params.require(:message).permit(:message, :to)
+    params.require(:message).permit(:message, :to, :date)
   end
 end
