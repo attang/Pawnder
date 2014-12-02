@@ -7,13 +7,17 @@
 	<p> I am a Dog Lover!!!! I don't own dogs. Add one by clicking here [insert button here to add method for dogs and assign to this owner] </p>
 <% end %>
 
-<h2> New Message! :D </h2>
+<%= params[:id] %>
+<%= current_user.id %>
 
-<%= simple_form_for Message.new do |f| %>
-  <%= f.hidden_field :to, :value => params[:id] %>
-  <%= f.hidden_field :date, :value => DateTime.now.to_date %>
-  <%= f.input :message %>
-  <%= f.button :submit %>
+
+<% if @user != current_user%>
+	<%= simple_form_for Message.new  do |f| %>
+	  <%= f.hidden_field :to, :value => params[:id] %>
+	  <%= f.hidden_field :date, :value => DateTime.now.to_date %>
+	  <%= f.input :message %>
+	  <%= f.button :submit %>
+	<% end %>
 <% end %>
 
 <h3>Rating/Review</h3>
