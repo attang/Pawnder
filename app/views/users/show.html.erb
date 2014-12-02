@@ -14,14 +14,13 @@
   <%= button_to "Add Dog", new_dog_path, :class => "button medium", :method => :get %>
 <% end %>
 
+<% if @user != current_user %>
+	<h2> Send me a message to meet up! </h2>
 
-<h2> Send me a message to meet up! </h2>
-
-<%= simple_form_for Message.new do |f| %>
-  <%= f.hidden_field :to, :value => params[:id] %>
-  <%= f.hidden_field :date, :value => DateTime.now.to_date %>
-  <%= f.input :message %>
-  <%= f.button :submit %>
+	<%= simple_form_for Message.new do |f| %>
+	  <%= f.hidden_field :to, :value => params[:id] %>
+	  <%= f.hidden_field :date, :value => DateTime.now.to_date %>
+	  <%= f.input :message %>
+	  <%= f.button :submit %>
+	<% end %>
 <% end %>
-
-<h3>Rating/Review</h3>
