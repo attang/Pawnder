@@ -1,22 +1,32 @@
 <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
+
+
+<div class="intro-pic"><div class="title animated fadeInDown" >Pawnder</div> 
+<div class="descrip">"Like tinder, but for dogs"</div>
+<div id="sign-up">
+	<button type="button" class="btn btn-primary"><%= link_to ' Sign up today!', new_user_session_path, :style => "color:#fff;"%></button>
+</div>
+</div>
 
 
 
-<div class="title">Pawnder</div>
 <div class="three-square">
 	<div class="square">
-		<%= image_tag "paw.png", :style => "width:150px; height: 150px;" %>
+		<%= image_tag "paw.png", :style => "width:150px; height: 150px; opacity:.5;" %>
 	Blah blah blah Blah blah blah  Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah  </div>
 
 	<div class="square">
-		<%= image_tag "two_dogs.png", :style => "width:150px; height: 150px;" %>
+		<%= image_tag "two_dogs.png", :style => "width:150px; height: 150px; opacity:.5;" %>
 	Blah blah blah Blah blah blah  Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah  </div>
 
 	<div class="square">
-		<%= image_tag "walking.png", :style => "width:150px; height: 150px;" %>
+		<%= image_tag "walking.png", :style => "width:150px; height: 150px; opacity:.5;" %>
 	Blah blah blah Blah blah blah  Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah  </div>
 
 </div>
+
+
 
 
 <div class="users-reg"><%= link_to 'Users:', users_path %> <%= User.count %> registered</div>

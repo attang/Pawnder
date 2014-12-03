@@ -1,23 +1,45 @@
-<h2><%= @user.name if @user.name %></h2>
-<p>Email: <%= @user.email if @user.email %></p>
 
-<% if @user.which == 0%>
-	<p> I am a Dog Owner!!!! Here is a list of my dogs:</p>
-	<% @user.dogs.each do |dog| %>
+
+<div class="user-prof">
+
+	<div class="bio-top">
+		<div id="username">
+	<h2><%= @user.name if @user.name %></h2>
+</div>
+
+<div class="circle-img">
+		<%= image_tag "prof.png", :style => "width:150px; height: 150px; opacity:.5;" %>
+	</div>
+
+
+<div id="user-bio"> 
+	<% if @user.which == 0%>
+	<p> I am a Dog Owner!!!! I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!</p>
+	<h3> My Dogs:</h3>
+	<div class="dog-box"><% @user.dogs.each do |dog| %>
+		<%= image_tag "paw.png", :style => "width:150px; height: 150px; opacity:.5;" %>
 	  <%= link_to dog.name, dog_path(params[:id] = dog.id) %>
 	<% end %>
+</div>
+
+
 <% else %>
 	<p> I am a Dog Lover!!!! I don't own dogs. I want to play with yours!</p>
 <% end %>
+
 
 
 <% if @user == current_user %>
   <%= button_to "Add Dog", new_dog_path, :class => "button medium", :method => :get %>
 <% end %>
 
-<% if @user != current_user %>
-	<h2> Send me a message to meet up! </h2>
+</div>
+</div>
 
+	
+
+<div class="send-message"><% if @user != current_user %>
+	<h2> Send me a message to meet up! </h2>
 	<%= simple_form_for Message.new do |f| %>
 	  <%= f.hidden_field :to, :value => params[:id] %>
 	  <%= f.hidden_field :date, :value => DateTime.now.to_date %>
@@ -25,3 +47,6 @@
 	  <%= f.button :submit %>
 	<% end %>
 <% end %>
+</div>
+
+</div>
