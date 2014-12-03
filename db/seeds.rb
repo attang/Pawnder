@@ -9,5 +9,6 @@
 ross = User.create name: 'Ross Teixeira', email: "rosstex16@aol.com", password: 'password', which: 0
 ross.dogs.create name: "Ruffington III", age: 0, breed: "Canoli Schnauzer"
 manisha = User.create name: "Mani$ha", email: "coolcat@hotmail.com", password: 'password', which: 1
+allan = User.create name: "Allan Tang", email: "readytotango@gmail.com", password: 'password', which: 1
 
 
