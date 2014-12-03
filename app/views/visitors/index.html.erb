@@ -5,7 +5,9 @@
 <div class="intro-pic"><div class="title animated fadeInDown" >Pawnder</div> 
 <div class="descrip">"Like tinder, but for dogs"</div>
 <div id="sign-up">
+	<% if !user_signed_in? %>
 	<button type="button" class="btn btn-primary"><%= link_to ' Sign up today!', new_user_session_path, :style => "color:#fff;"%></button>
+	<% end %>
 </div>
 </div>
 

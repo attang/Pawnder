@@ -4,7 +4,7 @@
 
 
 .dog-box {
-  width: 200px;
+  width: 100%;
   height: 200px;
   float: left;
   text-align: center;
@@ -14,4 +14,8 @@
 .dog-bio {
 	height: 250px;
   padding-left: 250px;
+}
+
+#dog-form input {
+	width: 100px;
 }
