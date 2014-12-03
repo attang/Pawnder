@@ -1,5 +1,20 @@
-<h3>Dog</h3>
-<p>Name: <%= @dog.name if @dog.name %></p>
+<div class="user-prof">
+
+<div class="circle-img">
+		<%= image_tag "paw.png", :style => "width:150px; height: 150px; opacity:.5;" %>
+	</div>
+
+<div class="dog-bio">
+
+	<h3><%= @dog.name if @dog.name %></h3>
+<p>Owner: <%= User.find(@dog.user_id).name %> </p>
 <p>Breed: <%= @dog.breed if @dog.breed %></p>
 <p>Age: <%= @dog.age if @dog.age %></p>
 <p>Description: <%= @dog.description if @dog.description %></p>
+
+<button type="button" class="btn btn-primary"><%= link_to ' Go back to Owner', users_path(User.find(@dog.user_id)), :style => "color:#fff;"%>
+</div>
+
+
+
+</div>

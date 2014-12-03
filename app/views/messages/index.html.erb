@@ -18,7 +18,7 @@
                   <div id="message">
                     <%= message.message %>
                   </div>
-                    <button type="button" class="btn btn-primary">Reply</button>
+                    <button type="button" class="btn btn-primary"><%= link_to ' Reply', users_path(message.from), :style => "color:#fff;"%></button>
                 </div>
               <%end%>
             </tr>
