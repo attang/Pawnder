@@ -17,8 +17,8 @@
 	<p> I am a Dog Owner!!!! I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!I am a Dog Owner!!!!</p>
 	<h3> My Dogs:</h3>
 	<div class="dog-box"><% @user.dogs.each do |dog| %>
-		<%= image_tag "paw.png", :style => "width:150px; height: 150px; opacity:.5;" %>
-	  <%= link_to dog.name, dog_path(params[:id] = dog.id) %>
+		<div class="each-dog"><%= image_tag "dog.png", :style => "width:100px; height: 100px; opacity:.5;" %>
+	  <%= link_to dog.name, dog_path(params[:id] = dog.id) %></div>
 	<% end %>
 </div>
 

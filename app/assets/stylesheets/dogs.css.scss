@@ -11,11 +11,24 @@
   padding: 10px;
 }
 
+.each-dog {
+	float: left;
+}
+
 .dog-bio {
 	height: 250px;
   padding-left: 250px;
 }
 
+#dog-form {
+	width: 300px;
+	height: 250px;
+	position: relative;
+	padding: 50px;
+	margin: auto;
+}
+
 #dog-form input {
-	width: 100px;
+	width: 200px;
+	margin-bottom:10px;
 }
