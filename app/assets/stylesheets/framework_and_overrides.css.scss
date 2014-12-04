@@ -12,6 +12,10 @@ img {
   font-size: inherit;
   }
 
+
+body {
+  background-color: #eee;
+}
 // THESE ARE EXAMPLES YOU CAN MODIFY
 // create your own classes
 // to make views framework-neutral
@@ -34,10 +38,11 @@ img {
 // apply styles to HTML elements
 // to make views framework-neutral
 main {
-  @extend .container;
+
   background-color: #eee;
   padding-bottom: 80px;
   width: 100%;
+  height: 100%;
   margin-top: 51px; // accommodate the navbar
   }
 section {
@@ -80,3 +85,179 @@ section {
   @extend .btn-primary;
   @extend .btn-xs;
 }
+
+.title {
+  top: 30%;
+  position: relative;
+  margin: auto;
+  width: 600px;
+  border-radius: 10px;
+  font-size: 100px;
+  text-align: center;
+  color: #fff;
+  font-family: 'Ubuntu', sans-serif;
+
+
+}
+
+
+.descrip {
+  width: 100%;
+  padding: 30px 0px;
+  font-size:25px;
+  text-align: center;
+  font-family: 'Bad Script', cursive;
+  color: white;
+  position: relative;
+  top:22%;
+
+}
+.three-square {
+  width: 80%;
+  position: relative;
+  margin: 0 auto;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.square {
+  display: inline-block;
+  width: 30%;
+  font-size: 18px;
+  position: relative;
+  padding: 20px;
+  margin-right:20px;
+  text-align: center;
+}
+
+.users-reg {
+  width: 200px;
+  margin: 0 auto;
+  font-size:20px;
+  border: 2px solid #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.intro-pic {
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,.8), rgba(0,0,0,.2)), url("dogs_play.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+}
+
+#sign-up {
+  top: 45%;
+  position: relative;
+  width: 100%;
+}
+
+#sign-up .btn-primary {
+  width: 300px;
+  padding: 10px 0px;
+  font-size: 20px;
+}
+
+.animated { 
+    -webkit-animation-duration: 1s; 
+    animation-duration: 1s; 
+    -webkit-animation-fill-mode: both; 
+    animation-fill-mode: both; 
+} 
+
+@-webkit-keyframes fadeInDown { 
+    0% { 
+        opacity: 0; 
+        -webkit-transform: translateY(-20px); 
+    } 
+    100% { 
+        opacity: 1; 
+        -webkit-transform: translateY(0); 
+    } 
+} 
+
+@keyframes fadeInDown { 
+    0% { 
+        opacity: 0; 
+        transform: translateY(-20px); 
+    } 
+    100% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    } 
+} 
+
+.fadeInDown { 
+    -webkit-animation-name: fadeInDown; 
+    animation-name: fadeInDown; 
+}
+
+.user-prof {
+  width: 960px;
+  background-color: #fff;
+  position: relative;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+
+#user-bio {
+  width: 400px;
+  float: right;
+}
+
+.send-message input {
+  width: 500px;
+  height: 150px;
+  float:left;
+}
+
+.send-message .simple_form label {
+  float: left;
+  width: 70px;
+  height: 150px;
+  text-align: right;
+  padding: 0 5px;
+}
+
+.send-message button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  height: 30px;
+  float:left;
+}
+
+.send-message {
+  width:900px;
+  height: 300px;
+  position: relative;
+  padding: 30px;
+}
+
+.circle-img {
+  width: 200px;
+  padding:20px;
+  height: 200px;
+  float: left;
+  border: 1px solid #eee;
+}
+
+.bio-top {
+  width: 900px;
+  position: relative;
+  margin: auto;
+  padding: 30px;
+  height:500px;
+  border-bottom: 1px solid #eee;
+}
+
+#user-bio {
+  width: 600px;
+  float: left;
+  padding: 5px 20px;
+}
+
+
+
+
+
+
+

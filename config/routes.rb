@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'messages/new'
 
   get 'messages/create'
 
@@ -10,6 +9,7 @@ Rails.application.routes.draw do
   get 'messages/update'
 
   get 'messages/destroy'
+
 
   root to: 'visitors#index'
   devise_for :users

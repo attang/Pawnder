@@ -1,29 +1,28 @@
 class MessagesController < ApplicationController
+  def index
+    @messages = Message.all
+  end
+
   def new
+   
   end
 
   def create
     @message = Message.new(message_params)
+    @message.to = message_params[:to]
+    @message.date = message_params[:date]
     @message.from = current_user.id
     @message.save
-    redirect_to user_path(current_user)
+    redirect_to user_path(message_params[:to])
+    
   end
 
   def show
   end
 
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
-  end
-
   private 
 
   def message_params
-    params.require(:message).permit(:message)
+    params.require(:message).permit(:message, :to, :date)
   end
 end
