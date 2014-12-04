@@ -9,7 +9,7 @@ class DogsController < ApplicationController
 			@current_user.save
 			redirect_to current_user
 		else
-			flash[:error] = @pokemon.errors.full_messages.to_sentence
+			flash[:error] = @dog.errors.full_messages.to_sentence
 			render 'new'
 		end
 	end
