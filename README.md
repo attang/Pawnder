@@ -27,7 +27,7 @@ Profile: name, age, breed, description
 
   Dependencies:
   
-  belongs_ to User
+    belongs_ to User
 
 Messages
 
@@ -37,7 +37,7 @@ Show all messages that are for the current user only
 
   Dependencies:
   
-  belongs_to User
+    belongs_to User
 
 Features
 ==================
