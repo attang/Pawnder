@@ -6,7 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-ross = User.create name: 'Ross Teixeira', email: "rosstex16@aol.com", password: 'password', which: 0
+ross = User.create name: 'Ross Teixeira', email: "rosstex16@aol.com", password: 'password', which: 1
 ross.dogs.create name: "Ruffington III", age: 4, breed: "Canoli Schnauzer"
-manisha = User.create name: "Mani$ha", email: "coolcat@hotmail.com", password: 'password'
+manisha = User.create name: "Mani$ha", email: "coolcat@hotmail.com", password: 'password', which: 1
+manisha.dogs.create name: "Scruffy", age: 5, breed: "Golden Retriever"
 allan = User.create name: "Allan Tang", email: "readytotango@gmail.com", password: 'password'

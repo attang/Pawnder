@@ -5,7 +5,7 @@ class DogsController < ApplicationController
 		@dog = Dog.new(dog_params)
 		@dog.user_id = current_user.id
 		if @dog.save
-			current_user.which = 0
+			current_user.which = 1
 			@current_user.save
 			redirect_to current_user
 		else
