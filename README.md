@@ -57,9 +57,9 @@ Gem that we added: annotate
 
 Division of Work
 ==================
-Manisha: CSS styling, Message model and controller
+Manisha: CSS styling on view pages, Message model, controller, and view logic
 
-Ross: Created screen cast, Dog model and controller
+Ross: Created screen cast, deployment to Heroku, Dog model, controller, and view logic
 
-Allan: Initial base project and functionality, User model and controller, deployment to Heroku
+Allan: Initial base project functionality, Gem searching/adding, User model, controller, and view logic
 
