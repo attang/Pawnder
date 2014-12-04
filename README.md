@@ -1,60 +1,65 @@
-Dog-App
+Pawnder Rails Application
 =================
 
-Title:  Dog_app
+Title:  Pawnder
 Team Members: Allan Tang, Manisha Sharma, Ross Teixeira
 Demo Link: 
 
 Idea: An application where fellow dog enthusiasts can find dogs to play with or have their own dogs meet up
 
 Models and Description:
-
+================
 User
 
 Profile: name, e-mail, either dog lover or dog owner
-has_many Reviews
-has_many Messages
-has_many Dogs
-belongs to City
-validation (can’t have two profiles for the same owner name)
+
+  Dependencies:
+  
+    has_many Messages
+    
+    has_many Dogs
+    
+    validation (can’t have two profiles for the same owner name)
 
 Dog
 
 Profile: name, age, breed, description
-belongs_ to User
 
-Cities
-
-has_many User
-view page listing all Users in a particular city
-
-Review
-
-for everyone to see
-belongs_to User
-text that shows review from User
-rating out of 5
+  Dependencies:
+  
+    belongs_ to User
 
 Messages
 
-A tab that shows up on the root page
-only for person logged in
-belongs_to User
+A tab that shows up on the root page only for person logged in
 
-Features:
+Show all messages that are for the current user only
 
-Root index lists Cities and Dogs (search ish function by city or by breed)
+  Dependencies:
+  
+    belongs_to User
+
+Features
+==================
 Users can log-in
-Users can visit cities or dog owner’s view page and request to meet up via Message model
-Dog Lovers can leave Reviews on dog owner’s 
 
-Questions for Jessica:
+Users can visit other Users request to meet up via Message model
 
-Two different types of log-ins too hard? feasible
-Can we store images? or link images will be good enough?
-AWS (requires account)
+Users classifed as Dog Lovers or Dog Owners, depending on if they own any dogs
 
+Message model has reply functionality
 
-How should we divide the work?
-How do we make users sign up to a particular city?
+Links on User page to their dog's profile
+
+Gem that we added: annotate
+
+- Shows useful schema information in the rb files
+
+Division of Work
+==================
+Manisha: CSS styling, Message model and controller
+
+Ross: Created screen cast, Dog model and controller
+
+Allan: Initial base project and functionality, User model and controller, deployment to Heroku
 
