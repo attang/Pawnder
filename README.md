@@ -2,8 +2,10 @@ Pawnder Rails Application
 =================
 
 Title:  Pawnder
+
 Team Members: Allan Tang, Manisha Sharma, Ross Teixeira
-Demo Link: 
+
+Demo Link: https://polar-basin-9680.herokuapp.com/
 
 Idea: An application where fellow dog enthusiasts can find dogs to play with or have their own dogs meet up
 
